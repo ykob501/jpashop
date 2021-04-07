@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:test
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        generate_statistics: true
+        #show_sql: true
+        format_sql: true
+
+logging:
+  level:
+    #    org.hibernate: debug
+    org.hibernate.stat: debug
+    org.hibernate.SQL: debug
+#    org.hibernate.type: trace  콘솔에 쿼리파라미터 남기는 건데 이거 보다 좋은 외부 라이브러리를 쓰자.
